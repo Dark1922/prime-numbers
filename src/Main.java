@@ -6,7 +6,7 @@ public class Main {
     public static void main(String[] args) {
         int limit = 100;
         int sum = calculateSumOfPrimes(limit);
-        logger.info("The sum of prime numbers up to " + limit + " is: " + sum);
+        logger.info("The sum of prime numbers up to " + limit + " is : " + sum);
     }
 
     public static int calculateSumOfPrimes(int limit) {
