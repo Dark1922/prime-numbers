@@ -7,6 +7,10 @@ public class Main {
         int limit = 100;
         int sum = calculateSumOfPrimes(limit);
         logger.info("The sum of prime numbers up to " + limit + " is : " + sum);
+
+        int number = 5; // You can change this value to calculate the factorial of a different number
+        long factorial = calculateFactorial(number);
+        logger.info("The factorial of " + number + " is: " + factorial);
     }
 
     public static int calculateSumOfPrimes(int limit) {
@@ -29,5 +33,16 @@ public class Main {
             }
         }
         return true;
+    }
+
+    public static long calculateFactorial(int number) {
+        if (number < 0) {
+            throw new IllegalArgumentException("Number must be non-negative.");
+        }
+        long result = 1;
+        for (int i = 1; i <= number; i++) {
+            result *= i;
+        }
+        return result;
     }
 }
